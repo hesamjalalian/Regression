@@ -1,0 +1,17 @@
+import matplotlib.pyplot as plt
+
+# Data for the pie chart
+sizes = [50, 25, 25]
+labels = ['Training', 'Validation (DSEL)', 'Testing']
+colors = ['lightblue', 'lightgreen', 'lightcoral']
+explode = (0.1, 0.1, 0.1)  # explode the 1st slice (Training)
+
+# Plotting the pie chart
+plt.figure(figsize=(8, 6))
+plt.pie(sizes, explode=explode, labels=labels, colors=colors, autopct='%1.1f%%', startangle=140)
+
+# Title of the pie chart
+plt.title('Data Split')
+
+# Show the plot
+plt.show()
